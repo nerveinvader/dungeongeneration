@@ -53,8 +53,8 @@ func _input(event):
 		try_move(0, 1)
 	
 	if event.is_action("ui_accept"):
-		create_level()
-#		fill_map()
+#		create_level()
+		fill_map()
 		_astar_data()
 
 ################################################# ADDITIONAL FUNCTIONS
@@ -101,24 +101,24 @@ func try_move(dx, dy):
 
 
 ######################## single room creator
-func create_room(size):
-	rng.randomize()
-	for x in size:
-		for y in size:
-			var chance = rng.randi_range(0, 3)
+#func create_room(size):
+#	rng.randomize()
+#	for x in size:
+#		for y in size:
+#			var chance = rng.randi_range(0, 3)
 #			if chance >= 1:
-			tile_map.set_cell(x, y, Tile.GROUND)
-			map.append(Vector2(x, y))
+#			tile_map.set_cell(x, y, Tile.GROUND)
+#			map.append(Vector2(x, y))
 #			else:
 #				y += 1
 ####################### level manager
-func create_level():
-	tile_map.clear()
-	map.clear()
-	create_room(room_size)
-	start_room = map[0]
-	end_room = map.back()
-	player.position = start_room * 32
+#func create_level():
+#	tile_map.clear()
+#	map.clear()
+#	create_room(room_size)
+#	start_room = map[0]
+#	end_room = map.back()
+#	player.position = start_room * 32
 #	print(start_room)
 #	print(end_room)
 ######################## random level generator
